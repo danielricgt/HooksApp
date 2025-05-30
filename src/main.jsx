@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import { HookApp } from './HookApp'
+import { CounterWithCustomHook } from './01-use-state/CounterWithCustomHook'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <HookApp />
+    <CounterWithCustomHook />
   </React.StrictMode>,
 )
