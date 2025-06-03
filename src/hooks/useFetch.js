@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 
-
 export const useFetch = (url) => {
   const [state, setState] = useState({
     data: null,
@@ -10,19 +9,22 @@ export const useFetch = (url) => {
   });
 
   useEffect(() => {
-     getFetch();
-  });
+    getFetch();
+  }, [url]);
 
-  const loadingState = () => { setState({ 
-    data: null,
-    isLoading: true,
-    hasError: false,
-    errorMessage: null,
-  })
+  const setLoadingState = () => {
+    setState({
+      data: null,
+      isLoading: true,
+      hasError: false,
+      errorMessage: null,
+    });
+  };
 
-  const getFetch =  async() => {
-loadingState();
-    const res =  await fetch(url);
+  const getFetch = async () => {
+    setLoadingState();
+
+    const res = await fetch(url);
 
     if (!res.ok) {
       setState({
@@ -32,21 +34,20 @@ loadingState();
         error: {
           code: res.status,
           message: res.statusText,
-        }
+        },
       });
       return;
     }
     const data = await res.json();
-  setState({
-    data: data,
-    isLoading: false,
-    hasError: false,
-    error: null,
-  })
-  }
+    setState({
+      data: data,
+      isLoading: false,
+      hasError: false,
+      error: null,
+    });
+  };
 
   return {
-    ...useFetch,
     data: state.data,
     isLoading: state.isLoading,
     hasError: state.hasError,
