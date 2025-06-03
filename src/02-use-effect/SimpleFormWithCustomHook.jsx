@@ -6,7 +6,7 @@ import { UseForm } from "../hooks/UseForm";
 export const SimpleFormWithCustonHook = () => {
   
 
-    const {FormState, onInputChange, username, email, password} = UseForm(    {
+    const {FormState, onInputChange, username, email, password, onResetForm } = UseForm(    {
         username: "",
         email: "",
         password: "",
@@ -29,7 +29,8 @@ export const SimpleFormWithCustonHook = () => {
 
             <input type="password" className="form-control mt-2" placeholder="password" name="password" value={password} onChange={onInputChange}
             />
-
+            
+            <button onClick={onResetForm} className="btn btn-primary  ">Reset</button>
         </>
     )
 }
