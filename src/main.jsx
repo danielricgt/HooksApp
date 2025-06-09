@@ -6,10 +6,11 @@ import './index.css'
 //  import { SimpleFormWithCustonHook } from './02-use-effect/SimpleFormWithCustomHook'
 // import { MultipleCustomHooks } from './03-examples/MultipleCustomHooks'
 import { FocusScreen } from './05-useRef/FocusScreen'
+import { LayoutPage } from './05-useLayoutEffect/Layout'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <FocusScreen  />
+    <LayoutPage  />
   </React.StrictMode>,
 )

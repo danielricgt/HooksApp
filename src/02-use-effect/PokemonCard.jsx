@@ -1,26 +1,35 @@
+import { useRef } from "react"
 import { useFetch } from "../hooks"
+import { useLayoutEffect } from "react";
+import { useState } from "react";
 
 export const PokemonCard = ({ id, name, sprites = [] }) => {
 
+  const h2Ref = useRef();
+  const [size, setSize] = useState({ height: 0, width: 0 })
 
-
+  useLayoutEffect(() => {
+    const { height, width } = h2Ref.current.getBoundingClientRect();
+    setSize({ height, width });
+  }, [name])
   return (
-    <section>
+    <section style={{ height: 200, display: 'flex', flexDirection: 'row' }}>
 
-      <h2 style={{ height: 200 }}
-        className="text-capitalize">
+      <h2 ref={h2Ref} className="text-capitalize">
         #{id} - {name}
       </h2>
       <div>
 
 
-      {sprites.map(sprite => (
-        <img key= {sprite} src={sprite} alt={name} />
-      ))
-    }
+        {sprites.map(sprite => (
+          <img key={sprite} src={sprite} alt={name} />
+        ))
+        }
+
 
       </div>
 
+        <pre>{JSON.stringify({ size })}</pre>
     </section>
   )
 }
