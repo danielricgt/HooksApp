@@ -7,10 +7,11 @@ import './index.css'
 // import { MultipleCustomHooks } from './03-examples/MultipleCustomHooks'
 import { FocusScreen } from './05-useRef/FocusScreen'
 import { LayoutPage } from './05-useLayoutEffect/Layout'
+import { Memorize } from './06-memos/Memorize'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <LayoutPage  />
+    <Memorize  />
   </React.StrictMode>,
 )
