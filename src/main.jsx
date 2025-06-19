@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
+import './08-UseReducer/intro-reducer'
 // import { CounterWithCustomHook } from './01-use-state/CounterWithCustomHook'
 // import { SimpleForm } from './02-use-effect/SimpleForm'
 //  import { SimpleFormWithCustonHook } from './02-use-effect/SimpleFormWithCustomHook'
@@ -13,8 +14,8 @@ import { CallBackHook } from './06-memos/CallBackHook'
 import { Padre } from './07-homework/Padre'
 
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Padre  />
-  </React.StrictMode>,
-)
+// ReactDOM.createRoot(document.getElementById('root')).render(
+//   <React.StrictMode>
+//     <Padre  />
+//   </React.StrictMode>,
+// )
