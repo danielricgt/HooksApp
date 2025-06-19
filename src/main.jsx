@@ -10,10 +10,11 @@ import { LayoutPage } from './05-useLayoutEffect/Layout'
 import { Memorize } from './06-memos/Memorize'
 import { MemoHook } from './06-memos/MemoHook'
 import { CallBackHook } from './06-memos/CallBackHook'
+import { Padre } from './07-homework/Padre'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <CallBackHook  />
+    <Padre  />
   </React.StrictMode>,
 )
