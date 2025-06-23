@@ -1,5 +1,6 @@
 import { useReducer } from "react"
 import { todoReducer } from "./todoReducer";
+import { ToDoList } from "./ToDoList";
 
 export const ToDoApp = () => {
 
@@ -7,7 +8,7 @@ export const ToDoApp = () => {
     const initialState = [
         {
             id: new Date().getTime(),
-            description: 'Recolectsolu stone',
+            description: 'Recolect soul stone',
             done: false
         },
         {
@@ -27,23 +28,11 @@ export const ToDoApp = () => {
 
             <div className="row">
                 <div className="col-7">
-                    <ul className="list-group">
-
-                        {
-                            todos.map(todo => (
-
-                                <li key={todo.id} className="list-group-item d-flex justify-content-between">
-                                    <span className="align-self-center">Item 1</span>
-                                    <button className="btn btn-primary">Borrar</button>
-
-                                </li>
-
-                            ))
-                        } 
 
 
+                  <ToDoList todo={initialState} />
+                    </div>
 
-                    </ul>
 
                     <br />
 
@@ -61,9 +50,6 @@ export const ToDoApp = () => {
                         </button>
                     </div>
                 </div>
-
-
-            </div>
 
 
         </>
