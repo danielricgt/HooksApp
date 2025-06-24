@@ -1,7 +1,7 @@
-export const todoReducer = (initialValue, action) => {
+export const todoReducer = (initialValue=[], action) => {
     switch (action.type) {
-        case 'ABC   ':
-            throw new Error ('action.type == ABC is not implemented yet' );
+        case '[TODO] Add Todo':
+           return   [ ...initialValue, action.payload]
 
         default: 
             return initialValue;
