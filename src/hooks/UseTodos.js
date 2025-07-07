@@ -4,7 +4,7 @@ import { todoReducer } from "../08-UseReducer/todoReducer";
 const init = () => {
   return JSON.parse(localStorage.getItem("todos") || []);
 }
-export const UseTodos = () => {
+export const useTodos = () => {
 
     const [todos, dispatch] = useReducer(todoReducer, [], init);
 
