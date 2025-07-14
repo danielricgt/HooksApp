@@ -3,7 +3,7 @@ import { PokemonCard } from "../02-use-effect/PokemonCard";
 import { useCounter, useFetch } from "../hooks"
 
 
-export const MultipleCustomHooks = () => {
+export const LayoutPage   = () => {
 
   const { counter, increment, decrease } = useCounter(1);
 
@@ -32,8 +32,7 @@ export const MultipleCustomHooks = () => {
 
 
       <button onClick={() => counter > 1 ? decrease() : null} className="btn btn-primary mt-1">Previous</button>
-      <button onClick={() => increment()} 
-      className="btn btn-primary mt-1">Next</button>
+      <button onClick={() => increment()} className="btn btn-primary mt-1">Next</button>
 
     </>
   )
