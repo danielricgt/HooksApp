@@ -1,7 +1,7 @@
 
 import { ToDoList } from "./ToDoList";
 import { ToDoAdd } from "./ToDoAdd";
-import { UseTodos } from "../hooks";
+import { useTodos } from "../hooks";
 
 
 export const ToDoApp = () => {

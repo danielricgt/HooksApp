@@ -1,8 +1,7 @@
-import { UseForm } from "../hooks/UseForm"
-
+import { useForm } from "../hooks/useForm";
 export const ToDoAdd = ({onNewToDo}) => {
 
-const {description, onInputChange, onResetForm} = UseForm({
+const {description, onInputChange, onResetForm} = useForm({
      description: '',
 });
 
