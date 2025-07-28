@@ -14,7 +14,7 @@ describe('test on todo app should show the component correctly', () => {
             todos: [
                 {
                     id: 1,
-                    description: 'Todo 1',
+                    description: 'Todo  1',
                     done: false
                 },
                 {
